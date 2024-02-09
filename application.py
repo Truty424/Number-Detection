@@ -21,7 +21,7 @@ label_fin_ans.pack(side=tk.BOTTOM, padx=20, pady=20,)
 label = tk.Label(window)
 label.pack(side=tk.BOTTOM, padx=20, pady=20,  before=label_fin_ans)
 
-canvas = tk.Canvas(bg="white")
+canvas = tk.Canvas(bg="white",height=300,width=150)
 canvas.pack(anchor='center', padx=30, pady=30, expand=1)
 
 window_width = 512
@@ -131,6 +131,7 @@ def load_image(filename):
     img = img.astype('float32')
     img = img / 255.0
     return img
+
 
 def delete_painting():
     canvas.delete("all")
